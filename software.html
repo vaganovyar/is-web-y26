@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прокуб</title>
+  <link rel="stylesheet" type="text/css" href="public/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="src/common.js"></script>
+  <link rel="shortcut icon" href="public/img/logo.png" type="image/png">
+</head>
+<body>
+<!-- Header part -->
+<header id="header">
+  <div class="header__logo" id="top_menu_logo">
+    <a href="#">
+      <img src="public/img/logo.png" alt="logo">
+    </a>
+  </div>
+  <nav id="top_menu" class="menu">
+    <ul class="menu__navigation">
+      <li><a href="index.html" class="menu__point"><h1 class="menu__shop-header">ПроКуб</h1><hr class="menu__underline"></a></li>
+      <li><a href="about.html" class="menu__point">О нас<hr class="menu__underline"></a></li>
+      <li><a href="news.html" class="menu__point">Новости<hr class="menu__underline"></a></li>
+      <li><a href="shop.html" class="menu__point">Товары<hr class="menu__underline"></a></li>
+      <li><a href="top.html" class="menu__point">Топ<hr class="menu__underline"></a></li>
+      <li><a href="accessories.html" class="menu__point">Аксессуары<hr class="menu__underline"></a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Main part -->
+<main>
+  <article class="content">
+    <h2 class="content__title_big">ПО</h2>
+    <h3 class="content__title">Программа для генерации скрамблов</h3>
+    <h4 class="content__title_small">Python</h4>
+    <pre>
+      <code>
+import random
+
+def generate_scramble():
+moves = ["U", "D", "L", "R", "F", "B"]
+modifiers = ["", "'", "2"]
+scramble = []
+
+for _ in range(20):  # Генерируем 20 ходов
+move = random.choice(moves)
+modifier = random.choice(modifiers)
+
+# Проверка на повторения одного хода
+if scramble and move == scramble[-1][0]:
+continue
+
+scramble.append(move + modifier)
+
+return " ".join(scramble)
+
+print(generate_scramble())
+      </code>
+    </pre>
+    <h4 class="content__title_small">JavaScript</h4>
+    <pre>
+      <code>
+function generateScramble() {
+    const moves = ["U", "D", "L", "R", "F", "B"];
+    const modifiers = ["", "'", "2"];
+    const scramble = [];
+
+    while (scramble.length < 20) {
+        const move = moves[Math.floor(Math.random() * moves.length)];
+        const modifier = modifiers[Math.floor(Math.random() * modifiers.length)];
+
+        // Проверка на повторения одного хода
+        if (scramble.length > 0 && scramble[scramble.length - 1][0] === move) {
+            continue;
+        }
+
+        scramble.push(move + modifier);
+    }
+
+    return scramble.join(" ");
+}
+
+console.log(generateScramble());
+      </code>
+    </pre>
+    <h4 class="content__title_small">Java</h4>
+    <pre>
+      <code>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class ScrambleGenerator {
+    public static void main(String[] args) {
+        System.out.println(generateScramble());
+    }
+
+    public static String generateScramble() {
+        String[] moves = {"U", "D", "L", "R", "F", "B"};
+        String[] modifiers = {"", "'", "2"};
+        List<String> scramble = new ArrayList<>();
+        Random random = new Random();
+
+        while (scramble.size() < 20) {
+            String move = moves[random.nextInt(moves.length)];
+            String modifier = modifiers[random.nextInt(modifiers.length)];
+
+            // Проверка на повторения одного хода
+            if (!scramble.isEmpty() && scramble.get(scramble.size() - 1).startsWith(move)) {
+                continue;
+            }
+
+            scramble.add(move + modifier);
+        }
+
+        return String.join(" ", scramble);
+    }
+}
+      </code>
+    </pre>
+    <h4 class="content__title_small">C#</h4>
+    <pre>
+      <code>
+using System;
+using System.Collections.Generic;
+
+class ScrambleGenerator
+{
+    static void Main()
+    {
+        Console.WriteLine(GenerateScramble());
+    }
+
+    static string GenerateScramble()
+    {
+        string[] moves = { "U", "D", "L", "R", "F", "B" };
+        string[] modifiers = { "", "'", "2" };
+        List<string> scramble = new List<string>();
+        Random random = new Random();
+
+        while (scramble.Count < 20)
+        {
+            string move = moves[random.Next(moves.Length)];
+            string modifier = modifiers[random.Next(modifiers.Length)];
+
+            // Проверка на повторения одного хода
+            if (scramble.Count > 0 && scramble[scramble.Count - 1].StartsWith(move))
+            {
+                continue;
+            }
+
+            scramble.Add(move + modifier);
+        }
+
+        return string.Join(" ", scramble);
+    }
+}
+      </code>
+    </pre>
+    <h4 class="content__title_small">C++</h4>
+    <pre>
+      <code>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+
+std::string generateScramble() {
+    std::vector<std::string> moves = {"U", "D", "L", "R", "F", "B"};
+    std::vector<std::string> modifiers = {"", "'", "2"};
+    std::vector<std::string> scramble;
+    srand(static_cast<unsigned>(time(0)));
+
+    while (scramble.size() < 20) {
+        std::string move = moves[rand() % moves.size()];
+        std::string modifier = modifiers[rand() % modifiers.size()];
+
+        // Проверка на повторения одного хода
+        if (!scramble.empty() && scramble.back()[0] == move[0]) {
+            continue;
+        }
+
+        scramble.push_back(move + modifier);
+    }
+
+    std::string result;
+    for (const auto& s : scramble) {
+        result += s + " ";
+    }
+
+    return result;
+}
+
+int main() {
+    std::cout << generateScramble() << std::endl;
+    return 0;
+}
+      </code>
+    </pre>
+  </article>
+</main>
+<!-- Footer part -->
+<footer>
+  <ul class="icons">
+    <li><a href="#"><img src="public/img/facebook.png" class="icons__icon"></a></li>
+    <li><a href="#"><img src="public/img/instagram.png" class="icons__icon"></a></li>
+    <li><a href="#"><img src="public/img/twitter.png" class="icons__icon"></a></li>
+    <li><a href="#"><img src="public/img/youtube.png" class="icons__icon"></a></li>
+  </ul>
+  <p>
+    Онлайн-магазин товаров для спидкубинга<br><b>ПроКуб</b>
+  </p>
+  <p id="load_time"></p>
+</footer>
+</body>
+</html>
