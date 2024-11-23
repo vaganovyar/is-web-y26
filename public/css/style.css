@@ -184,7 +184,6 @@ main {
 	color: white;
 	transition: 0.5s;
 	opacity: 0;
-	width: 86vw;
 }
 #slider__text {
 	font-style: italic;
@@ -193,7 +192,6 @@ main {
 	color: white;
 	transition: 0.5s;
 	opacity: 0;
-	width: 86vw;
 }
 
 .tiles {
