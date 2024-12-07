@@ -33,73 +33,33 @@
 <!-- Main part -->
 <main>
     <article class="content">
-        <h2 class="content__title_big">Топ товаров</h2>
-        <h3 class="content__title"><del>Ноябрь</del><ins>Декабрь</ins></h3>
+        <h2 class="content__title_big">Таймер</h2>
+        <p class="content__text">Вводите время своих сборок. Таймер автоматически будет собирать статистику</p>
+        <h3 class="content__title_small">Скрамбл</h3>
+        <p class="content__text" id="scramble"></p>
+        <div class="timer">
+            <form name="solving">
+                <label>
+                    Время: <input type="text" name="time" placeholder="__:__.__" class="input-form">
+                </label>
+                <input type="submit" name="solving_submit" hidden>
+            </form>
+            <button class="timer__button" onclick="deleteSolvings()">Очистить сборки</button>
+        </div>
         <section>
-            <ol class="content__text_loose">
-                <li>GAN 13 Maglev</li>
-                <li>Moyu RS3M 2023</li>
-                <li>YJ MGC Evo</li>
-                <li>QiYi X-Man Tornado V3</li>
-                <li>Dayan TengYun V3 M</li>
-            </ol>
-            <table class="common-table">
+            <table class="common-table" id="solvings_table">
                 <caption>
-                    <h4 class="content__title_small common-table__header">Сравнение кубов</h4>
+                    <h3 class="content__title_small common-table__header">Все сборки</h3>
                 </caption>
                 <tbody>
-                    <tr>
-                        <th>Название</th>
-                        <th>Рейтинг</th>
-                        <th>Цена, руб</th>
-                        <th>Количество покупок</th>
-                    </tr>
-                    <tr>
-                        <td>GAN 13 Maglev</td>
-                        <td>4.89</td>
-                        <td>6000</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>Moyu RS3M 2023</td>
-                        <td>4.83</td>
-                        <td>1600</td>
-                        <td>83</td>
-                    </tr>
-                    <tr>
-                        <td>YJ MGC Evo</td>
-                        <td>4.75</td>
-                        <td>1600</td>
-                        <td>72</td>
-                    </tr>
-                    <tr>
-                        <td>QiYi X-Man Tornado V3</td>
-                        <td>4.73</td>
-                        <td>3100</td>
-                        <td>70</td>
-                    </tr>
-                    <tr>
-                        <td>Dayan TengYun V3 M</td>
-                        <td>4.70</td>
-                        <td>2800</td>
-                        <td>28</td>
-                    </tr>
+                <tr>
+                    <th>№</th>
+                    <th>Скрамбл</th>
+                    <th>Время</th>
+                </tr>
                 </tbody>
             </table>
         </section>
-        <h3 class="content__title">Внешний вид</h3>
-        <pre class="content__text">
-        ___ ___ ___
-       /___/___/___/|
-      /___/___/___/||
-     /___/___/__ /|/|
-    |   |   |   | /||
-    |___|___|___|/|/|
-    |   |   |   | /||
-    |___|___|___|/|/
-    |   |   |   | /
-    |___|___|___|/
-        </pre>
     </article>
 </main>
 <!-- Footer part -->
@@ -115,5 +75,6 @@
     </p>
     <p id="load_time"></p>
 </footer>
+<script type="text/javascript" src="src/timer.js"></script>
 </body>
 </html>

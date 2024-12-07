@@ -46,6 +46,17 @@ ul {
 button {
 	border: none;
 	background-color: #FFFFFF00;
+	cursor: pointer;
+	font-family: "Roboto", "Arial", sans-serif;
+	@media (min-width: 300px) {
+		font-size: 0.75em;
+	}
+	@media (min-width: 500px) {
+		font-size: 1em;
+	}
+	@media (min-width: 2000px) {
+		font-size: 2em;
+	}
 }
 header {
 	position: fixed;
@@ -346,19 +357,37 @@ main {
 	text-decoration: underline overline;
 	text-transform: uppercase;
 }
-.top-table {
+.common-table {
 	width: 100%;
 	border-collapse: collapse;
 }
-.top-table__header {
+.common-table__header {
 	text-align: center;
 	margin: 0;
 }
-.top-table > tbody > tr > th {
+.common-table > tbody > tr > th {
 	border: 3px solid #304574;
 }
-.top-table > tbody > tr > td {
+.common-table > tbody > tr > td {
 	border: 3px solid #304574;
+}
+.input-form {
+	border: 1px solid #304574;
+	outline: none;
+	color: #85A8D9;
+}
+.timer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.timer__button {
+	border-radius: 10px;
+	background-color: #FF9700;
+	padding: 5px 10px;
+	transition: 0.5s;
+	opacity: 0.5;
+	color: white;
 }
 .menu__point:hover .menu__underline{
 	opacity: 1;
@@ -385,6 +414,10 @@ footer:hover {
 	transition: 0.5s;
   	background-color: #FF9700;
 }
-.top-table > tbody > tr:nth-child(even) {
+.common-table > tbody > tr:nth-child(even) {
 	background-color: rgba(133, 168, 217, 0.5);
+}
+.timer__button:hover {
+	transition: 0.5s;
+	opacity: 1;
 }
