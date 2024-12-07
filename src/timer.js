@@ -59,7 +59,7 @@ function getTime() {
 
 function createTable() {
     let table = document.getElementById("solvings_table");
-    for (let i = solvings_json.data.length - 1; i >= 0; i--) {
+    for (let i = 0; i < solvings_json.data.length; i++) {
         let row = table.insertRow(1);
 
         let number = row.insertCell(0);
