@@ -32,65 +32,7 @@
 </header>
 <!-- Main part -->
 <main class="tiles">
-  <a href="#" class="article">
-    <h3 class="article__header">GAN 13 Maglev</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__price">6000 ₽</p>
-    <p class="article__text">Gan 13 M Maglev 3x3x3 — новый флагманский кубик компании Ган, выпущенный в конце 2022 года. Пазл станет основным кубом фирмы на весь следующий год.</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">Moyu RS3M 2023</h3>
-    <img src="public/img/slider_image_1.png" alt="image" class="article__image">
-    <p class="article__price">1600 ₽</p>
-    <p class="article__text">MoYu 3x3x3 RS3 M v5 (Ball Core UV + Robot Display Box) – самый технологичный из серии V5. Уже знакомый спидкуберам узор “чешуя дракона” покрывает внутренние поверхности кубика, равномерно распределяя и удерживая смазку внутри.</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">YJ MGC Evo</h3>
-    <img src="public/img/slider_image_2.png" alt="image" class="article__image">
-    <p class="article__price">1600 ₽</p>
-    <p class="article__text">ВайДжей 3х3х3 МГС Эво в2 — хороший кубик с большим количеством настроек за приемлемую цену в своей категории кубов, поэтому головоломка подойдет практически каждому спидкуберу.</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">QiYi X-Man Tornado V3</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__price">3100 ₽</p>
-    <p class="article__text">QiYi MoFangGe X-man 3x3x3 Tornado V3 M Pioneer Version — самый технологичный скоростной кубик Рубика Торнадо на 2022 год.</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">Dayan TengYun V3 M</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__price">2800 ₽</p>
-    <p class="article__text">DaYan TengYun v3 M 3x3 — еще один большой шаг вперед для кубиков 3х3 от ДаЯн. Новый флагманский куб конца 2022 года порадует не только поклонников DaYan, но и тех спидкуберов, которые ищут отличный скоростной кубик Рубика.</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">MoYu Timer</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__price">900 ₽</p>
-    <p class="article__text">Таймеры – очень важная часть спидкубинга. Как можно собирать на скорость не засекая время? Никак! Но многие куберы не могут позволить себе такую роскошь. Мою Таймер исправил ситуацию!</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">QiYi MoFangGe M-Lube</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__price">150 ₽</p>
-    <p class="article__text">iYi MoFangGe M-Lube Смазка - одна из лучших густых смазок, она придаст вашей головоломке очень много контроля, но значительно не изменит скорость.</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">MoYu Timer</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__price">900 ₽</p>
-    <p class="article__text">Таймеры – очень важная часть спидкубинга. Как можно собирать на скорость не засекая время? Никак! Но многие куберы не могут позволить себе такую роскошь. Мою Таймер исправил ситуацию!</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">QiYi MoFangGe M-Lube</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__price">150 ₽</p>
-    <p class="article__text">iYi MoFangGe M-Lube Смазка - одна из лучших густых смазок, она придаст вашей головоломке очень много контроля, но значительно не изменит скорость.</p>
-  </a>
-  <a href="#" class="article">
-    <h3 class="article__header">Пусто</h3>
-    <img src="public/img/slider_image_0.png" alt="image" class="article__image">
-    <p class="article__text">Пусто</p>
-  </a>
+  <div class="loader" id="shop_loader"></div>
 </main>
 <!-- Footer part -->
 <footer>
@@ -105,5 +47,7 @@
   </p>
   <p id="load_time"></p>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollmonitor/1.2.4/scrollMonitor.js" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="src/shop_loader.js"></script>
 </body>
 </html>
